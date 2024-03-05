@@ -144,6 +144,6 @@ module tt_um_4bit_cpu_with_fsm (
     assign out_data = accumulator;
     assign uo_out = {4'b0000, out_data};
     assign uio_out = 8'b00000000;
-    assign uio_ue[7:0] = 8'b01110000; //used bidirectional pins as input
+    assign uio_oe = 8'b00000000; //used bidirectional pins as input
 
 endmodule
