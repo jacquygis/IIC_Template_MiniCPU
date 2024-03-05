@@ -135,7 +135,7 @@ module tt_um_4bit_cpu_with_fsm (
 						accumulator;
 		    SHIFT: next_accumulator <= 	(in_opcode == 4'b1001) ? operand_a << 1: //SHIFT LEFT
 						(in_opcode == 4'b1010) ? operand_a >> 1: //SHIFT LEFT
-						accumulator;
+						accumulator; 
 		    default: next_accumulator <= accumulator;
 	    endcase
     end
