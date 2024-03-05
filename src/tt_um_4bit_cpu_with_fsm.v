@@ -66,7 +66,7 @@ module tt_um_4bit_cpu_with_fsm (
 		    for (i=0 ; i<=15 ; i = i+1)
 		    begin
 			    memory[i] <= 4'b0000;
-		    end;
+		    end
 	    end else begin
 		    write_enable_ff <= in_write_enable;
 		    fsm_state <= next_fsm_state;
@@ -76,10 +76,10 @@ module tt_um_4bit_cpu_with_fsm (
 		    for (i=0; i<=15; i = i+1)
 		    begin
 			    memory[i] <= next_memory[i];
-		    end;
-	    end;
+		    end
+	    end
 	    i = 0;
-    end;
+    end
 
 
     //FSM Logik
@@ -98,8 +98,8 @@ module tt_um_4bit_cpu_with_fsm (
 		    LOGIC:	next_fsm_state <= IDLE;
 		    SHIFT:	next_fsm_state <= IDLE;
 		    default:	next_fsm_state <= IDLE;
-	    endcase;
-    end;
+	    endcase
+    end
 
 
     //chose operand with MUX
@@ -109,14 +109,14 @@ module tt_um_4bit_cpu_with_fsm (
 		    begin
 			    next_operand_a <= accumulator;
 		    	    next_operand_b <= in_data;
-		    end;
+		    end
 		    default: 
 		    begin
 			    next_operand_a <= in_data;
 		    	    next_operand_b <= 4'b0000;
-		    end;
-	    endcase;
-    end;
+		    end
+	    endcase
+    end
 
 
     //Accumulator-Logic Operations depending on FSM-state
@@ -137,8 +137,8 @@ module tt_um_4bit_cpu_with_fsm (
 						(in_opcode == 4'b1010) ? operand_a >> 1: //SHIFT LEFT
 						accumulator;
 		    default: next_accumulator <= accumulator;
-	    endcase;
-    end;
+	    endcase
+    end
 
 
     assign out_data = accumulator;
