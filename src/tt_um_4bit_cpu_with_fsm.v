@@ -109,12 +109,12 @@ module tt_um_4bit_cpu_with_fsm (
 		    begin
 			    next_operand_a <= accumulator;
 		    	    next_operand_b <= in_data;
-		    end
+		    end;
 		    default: 
 		    begin
 			    next_operand_a <= in_data;
 		    	    next_operand_b <= 4'b0000;
-		    end
+		    end;
 	    endcase;
     end;
 
