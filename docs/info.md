@@ -9,12 +9,10 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Based on the input information, a few operations can be used to process the input values. If there should be operations done with two or more values, store- and loading- operations have to be executed in between before going to the next calculation step.
 
 ## How to test
 
-Explain how to use your project
+For example giving the CPU a value to store and next to load into the accumulator by giving the correct operation codes and the storage address.
+Next giving the CPU the next value and the operation that should be processes onto those to values, for example a AND function. The result will be given to the output converted to a 8-Bit signal.
 
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
