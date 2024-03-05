@@ -23,7 +23,7 @@ module tt_um_4bit_cpu_with_fsm (
     input  wire       ena,	// high when design is selected
     input  wire       clk,      // clock
     input  wire       rst_n,    // reset_n - low to reset
-    input  wire [7:0] uio_oe,	// enable path 0=input
+    output wire [7:0] uio_oe,	// enable path 0=input
     output wire	[7:0] uio_out   // I/Os outputs - not used
 );
 
@@ -144,5 +144,6 @@ module tt_um_4bit_cpu_with_fsm (
     assign out_data = accumulator;
     assign uo_out = {4'b0000, out_data};
     assign uio_out = 8'b00000000;
+    assign uio_ue = 8'b00000000;
 
 endmodule
