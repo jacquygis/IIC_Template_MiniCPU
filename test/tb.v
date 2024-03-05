@@ -25,7 +25,7 @@ module tb ();
   // Replace tt_um_example with your module name:
   tt_um_4bit_cpu_with_fsm tt_um_4bit_cpu_with_fsm(
 
-      // Include power ports for the Gate Level test:
+      // Include power ports for the Gate Level test: 
 `ifdef GL_TEST
       .VPWR(1'b1),
       .VGND(1'b0),
